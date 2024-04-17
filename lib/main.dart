@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
-    );
+    runApp(const MyApp());
   }
-}
+
+  class MyApp extends StatelessWidget {
+    const MyApp({Key? key});
+
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const HomePage(),
+      );
+    }
+  }
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -25,23 +25,30 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  final int _count = 1;
+  int _count = 0;
 
-  
+  void _increment() {
+    setState(() {
+      _count++;
+    });
+  }  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          padding: EdgeInsets.all(24),
-          decoration: BoxDecoration(
-            color: Colors.amber,
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Text('Count is: $_count'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: const Text('You Pressed this many times'),
+            ),
+            Text(_count.toString(), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),)
+          ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(onPressed: () => _increment , child: const Icon(Icons.add),),
     );
   }
 }
