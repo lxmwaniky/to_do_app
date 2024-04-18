@@ -11,10 +11,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List toDoitems = [
     ['Coding', false],
-    ['Debugging', false]
+    ['Debugging', false],
+    ['Testing', false],
+    ['Deploying', false],
   ];
 
-  void checkBoxState (bool? value, int index) {
+  void checkBoxState(bool? value, int index) {
     setState(() {
       toDoitems[index][1] = !toDoitems[index][1];
     });
@@ -26,7 +28,7 @@ class _HomePageState extends State<HomePage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('To Do App'),
+          title: const Text('To Do App'),
           backgroundColor: Colors.amberAccent,
         ),
         body: ListView.builder(
