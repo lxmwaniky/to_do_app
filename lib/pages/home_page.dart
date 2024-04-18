@@ -14,23 +14,32 @@ class _HomePageState extends State<HomePage> {
     ['Debugging', false]
   ];
 
+  void checkBoxState (bool? value, int index) {
+    setState(() {
+      toDoitems[index][1] = !toDoitems[index][1];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: AppBar(
-            title: Text('To Do App'),
-            backgroundColor: Colors.amberAccent,
-          ),
-          body: ListView.builder(
-              itemCount: toDoitems.length,
-              itemBuilder: ((context, index) {
-                return ToDoTile(
-                  taskName: toDoitems[index][0],
-                  isDone: toDoitems[index][1],
-                );
-              }))),
+        appBar: AppBar(
+          title: Text('To Do App'),
+          backgroundColor: Colors.amberAccent,
+        ),
+        body: ListView.builder(
+          itemCount: toDoitems.length,
+          itemBuilder: ((context, index) {
+            return ToDoTile(
+              taskName: toDoitems[index][0],
+              isDone: toDoitems[index][1],
+              onChanged: (value) => checkBoxState(value, index),
+            );
+          }),
+        ),
+      ),
     );
   }
 }

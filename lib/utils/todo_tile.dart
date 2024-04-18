@@ -9,6 +9,7 @@ class ToDoTile extends StatelessWidget {
     super.key,
     required this.taskName,
     required this.isDone,
+    required this.onChanged,
   });
 
   @override
@@ -17,7 +18,13 @@ class ToDoTile extends StatelessWidget {
       child: Row(
         children: [
           Checkbox(value: isDone, onChanged: onChanged),
-          Text(taskName),
+          Text(
+            taskName,
+            style: TextStyle(
+              decoration:
+                  isDone ? TextDecoration.lineThrough : TextDecoration.none,
+            ),
+          ),
         ],
       ),
     );
