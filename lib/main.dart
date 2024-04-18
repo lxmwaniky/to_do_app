@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:to_do_app/pages/home_page.dart';
 void main()
 {
   runApp(MyApp());
@@ -12,23 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.yellow,
-      ),
+      title: 'To Do App',
       home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Counter App"),
-      ),
     );
   }
 }
