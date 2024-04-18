@@ -6,9 +6,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text('To Do App'),
+          backgroundColor: Colors.amberAccent,
         ),
         body: null,
       ),
