@@ -30,7 +30,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: List
+      appBar: AppBar(
+        title: const Text('Increment'),
+      ),
+      
     );
   }
 }
