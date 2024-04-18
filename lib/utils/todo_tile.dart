@@ -5,11 +5,12 @@ class ToDoTile extends StatelessWidget {
   final bool taskCompleted;
   Function(bool?)? onChanged;
 
-  ToDoTile(
-      {super.key,
-      required this.taskName,
-      required this.taskCompleted,
-      this.onChanged});
+  ToDoTile({
+    super.key,
+    required this.taskName,
+    required this.taskCompleted,
+    this.onChanged,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,8 @@ class ToDoTile extends StatelessWidget {
         child: Row(
           children: [
             Checkbox(value: taskCompleted, onChanged: onChanged),
-            Text(taskName,
+            Text(
+              taskName,
               style: TextStyle(fontSize: 18),
             ),
           ],
