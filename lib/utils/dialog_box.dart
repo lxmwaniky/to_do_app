@@ -17,16 +17,26 @@ class DialogBox extends StatelessWidget {
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Enter Task',
-              )
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  MyButton(text: "Save", onPressed: () {}, color: Colors.green,),
-                  SizedBox(width: 45,),
-                  MyButton(text: "Cancel", onPressed: () {}, color: Colors.red,),
-                ],
-              )
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                MyButton(
+                  text: "Save",
+                  onPressed: () {},
+                  color: Colors.green,
+                ),
+                SizedBox(
+                  width: 45,
+                ),
+                MyButton(
+                  text: "Cancel",
+                  onPressed: () {},
+                  color: Colors.red,
+                ),
+              ],
+            )
           ],
         ),
       ),
