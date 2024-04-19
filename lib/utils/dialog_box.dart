@@ -22,9 +22,9 @@ class DialogBox extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  MyButton(text: "Save", onPressed: () {}),
+                  MyButton(text: "Save", onPressed: () {}, color: Colors.green,),
                   SizedBox(width: 45,),
-                  MyButton(text: "Cancel", onPressed: () {}),
+                  MyButton(text: "Cancel", onPressed: () {}, color: Colors.red,),
                 ],
               )
           ],
