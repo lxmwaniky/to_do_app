@@ -34,25 +34,24 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('To Do App'),
-          backgroundColor: Colors.amberAccent,
-        ),
-        body: ListView.builder(
-          itemCount: toDoitems.length,
-          itemBuilder: ((context, index) {
-            return ToDoTile(
-              taskName: toDoitems[index][0],
-              isDone: toDoitems[index][1],
-              onChanged: (value) => checkBoxState(value, index),
-            );
-          }),
-        ),
-        floatingActionButton: FloatingActionButton(
-            onPressed: createTask, child: const Icon(Icons.add)),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('To Do App'),
+        backgroundColor: Colors.amberAccent,
+      ),
+      body: ListView.builder(
+        itemCount: toDoitems.length,
+        itemBuilder: ((context, index) {
+          return ToDoTile(
+            taskName: toDoitems[index][0],
+            isDone: toDoitems[index][1],
+            onChanged: (value) => checkBoxState(value, index),
+          );
+        }),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: createTask,
+        child: const Icon(Icons.add),
       ),
     );
   }
