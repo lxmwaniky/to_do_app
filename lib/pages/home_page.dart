@@ -10,7 +10,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   final _controller = TextEditingController();
 
   List toDoitems = [];
@@ -41,6 +40,12 @@ class _HomePageState extends State<HomePage> {
         });
   }
 
+  void deleteTask(int index) {
+    setState(() {
+      toDoitems.removeAt(index);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -57,6 +62,7 @@ class _HomePageState extends State<HomePage> {
               taskName: toDoitems[index][0],
               isDone: toDoitems[index][1],
               onChanged: (value) => checkBoxState(value, index),
+              deleteFunction: (context) => deleteTask(index),
             );
           }),
         ),
