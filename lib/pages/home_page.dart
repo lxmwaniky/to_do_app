@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       db.toDoitems.removeAt(index);
     });
-    db.upDateDB();
+    
   }
 
   @override
