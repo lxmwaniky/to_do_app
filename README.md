@@ -1,16 +1,23 @@
-# to_do_app
+## To Do App
 
-A new Flutter project.
+A Simple To-Do App in Flutter
 
-## Getting Started
+### Features
+- Add a new task
+- Mark a task as completed
+- Delete a task
+- Saves the tasks in local storage
+- Responsive UI
+- Animations
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Issues
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+To submit any issues create a new [issue](#)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Contact
+If you have any questions, feel free to contact me at [lekko254@gmail.com](mailto:lekko254@gmail.com)
+
+ - Follow me on [X](https://x.com/lxmwaniky)
+
+ - Connect on [LinkedIn](https://linkedin.com/in/lxmwaniky)
