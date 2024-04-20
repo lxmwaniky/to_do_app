@@ -1,6 +1,6 @@
 ## To Do App
 
-A Simple To-Do App in Flutter
+A Simple [To-Do App](https://github.com/lxmwaniky/to_do_app/releases/download/to-do-app/app-release.apk) in Flutter
 
 ### Features
 - Add a new task
@@ -13,7 +13,7 @@ A Simple To-Do App in Flutter
 
 ### Issues
 
-To submit any issues create a new [issue](#)
+To submit any issues create a new [issue](https://github.com/lxmwaniky/to_do_app/issues)
 
 ### Contact
 If you have any questions, feel free to contact me at [lekko254@gmail.com](mailto:lekko254@gmail.com)
